@@ -8,15 +8,16 @@
     <ImageView
         android:id="@+id/flag"
         android:layout_width="55dp"
-        android:layout_height="40dp"/>
-    
+        android:layout_height="40dp" />
+
     <TextView
         android:id="@+id/country_code"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
         android:text="CRT"
-        android:textSize="20dp"/>
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp" />
 
 </LinearLayout>

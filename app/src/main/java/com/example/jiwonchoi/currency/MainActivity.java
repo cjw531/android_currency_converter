@@ -152,6 +152,8 @@ public class MainActivity extends AppCompatActivity
                 imm.hideSoftInputFromWindow(money_input.getWindowToken(), 0);
                 TextView moneyInput = findViewById(R.id.money_1);
                 moneyInput.setText("957000");
+//                Button temp = findViewById(R.id.button_s9);
+//                temp.setBackgroundColor(0xff40d9ff);
                 money_input.setSelection(result.length());
             }
         });
