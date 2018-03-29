@@ -49,4 +49,5 @@ Android Application: Currency Calculator (v. 2.1.0)
 
 ## Minimum SDK
 > API 23: Android 6.0 (Marshmallow) and later.
+
 > Internet is always required in order to get currency information from fixer.io.
