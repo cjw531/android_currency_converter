@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:id="@+id/main_screen"
+    android:onClick="linearOnClick"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jiwonchoi.currency.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_s9"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:text="Galaxy S9"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_s9_plus_64"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:text="Galaxy S9+
+(64GB)"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_s9_plus_128"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="false"
+            android:text="Galaxy S9+
+(128GB)"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_gear_s3"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:text="Gear S3
+(Bluetooth)"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_gear_sport"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:text="Gear Sport"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_gear_fit2pro"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="false"
+            android:text="Gear Fit2 Pro"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Updated"
+        android:textAlignment="center"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/krw"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/money_name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:text="KRW"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/money_1"
+            android:textSize="20dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="false"
+            android:forceHasOverlappingRendering="false"
+            android:inputType="numberDecimal"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="150dp"
+            android:layout_height="50dp"></Spinner>
+
+        <EditText
+            android:id="@+id/money_2"
+            android:textSize="20dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="false"
+            android:forceHasOverlappingRendering="false"
+            android:inputType="numberDecimal"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fixer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Currency Powered by Fixer.io"
+        android:textAlignment="viewEnd"
+        android:textSize="16dp" />
+
+</LinearLayout>

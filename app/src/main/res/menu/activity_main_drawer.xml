@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_currency"
+            android:icon="@drawable/ic_menu_currency"
+            android:title="Currency" />
+        <item
+            android:id="@+id/nav_series_9"
+            android:icon="@drawable/ic_menu_smartphone"
+            android:title="Galaxy S9 | S9+" />
+
+        <item
+            android:id="@+id/nav_series_8"
+            android:icon="@drawable/ic_menu_smartphone"
+            android:title="Galaxy S8 | S8+ | Note 8" />
+
+        <item
+            android:id="@+id/nav_series_A"
+            android:icon="@drawable/ic_menu_smartphone"
+            android:title="Galaxy A" />
+
+        <item
+            android:id="@+id/nav_series_J"
+            android:icon="@drawable/ic_menu_smartphone"
+            android:title="Galaxy J" />
+
+        <item
+            android:id="@+id/nav_smart_watch"
+            android:icon="@drawable/ic_menu_watch"
+            android:title="Gear: Smart Watch" />
+        <item
+            android:id="@+id/nav_gear"
+            android:icon="@drawable/ic_menu_bluetooth"
+            android:title="Gear" />
+
+    </group>
+
+</menu>
