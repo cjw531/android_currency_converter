@@ -154,6 +154,20 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Calculate" />
+
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/fixer"
         android:layout_width="match_parent"
@@ -163,5 +177,6 @@
         android:textAlignment="viewEnd"
         android:textColor="@color/colorBlack"
         android:textSize="16dp" />
+
 
 </LinearLayout>

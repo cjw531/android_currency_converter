@@ -125,12 +125,8 @@ public class MainActivity extends AppCompatActivity
                 if(dataLoad) {
                     currencyRate = currencyList.get(i).getRate();
                 }
-
-                if (!(money_input.getText().toString().equals(""))) {
-                    double changeValue = Integer.parseInt(money_input.getText().toString().replaceAll(",", "")) * currencyRate;
-                    String formatted = df.format(changeValue);
-                    money_output.setText(formatted + "");
-                }
+                imm.hideSoftInputFromWindow(money_input.getWindowToken(), 0);
+                money_output.setText("");
             }
 
             @Override
@@ -152,9 +148,11 @@ public class MainActivity extends AppCompatActivity
                 imm.hideSoftInputFromWindow(money_input.getWindowToken(), 0);
                 TextView moneyInput = findViewById(R.id.money_1);
                 moneyInput.setText("957000");
-//                Button temp = findViewById(R.id.button_s9);
-//                temp.setBackgroundColor(0xff40d9ff);
+//                Button button = findViewById(R.id.button_s9);
+//                button.setTypeface(null, Typeface.BOLD);
+//                button.setTextColor(Color.parseColor("#FF800C1D"));
                 money_input.setSelection(result.length());
+                money_output.setText("");
             }
         });
 
@@ -163,7 +161,11 @@ public class MainActivity extends AppCompatActivity
                 imm.hideSoftInputFromWindow(money_input.getWindowToken(), 0);
                 TextView moneyInput = findViewById(R.id.money_1);
                 moneyInput.setText("1056000");
+//                Button button = findViewById(R.id.button_s9_plus_64);
+//                button.setTypeface(null, Typeface.BOLD);
+//                button.setTextColor(Color.parseColor("#FF800C1D"));
                 money_input.setSelection(result.length());
+                money_output.setText("");
             }
         });
 
@@ -173,6 +175,7 @@ public class MainActivity extends AppCompatActivity
                 TextView moneyInput = findViewById(R.id.money_1);
                 moneyInput.setText("1155000");
                 money_input.setSelection(result.length());
+                money_output.setText("");
             }
         });
 
@@ -182,6 +185,7 @@ public class MainActivity extends AppCompatActivity
                 TextView moneyInput = findViewById(R.id.money_1);
                 moneyInput.setText("399000");
                 money_input.setSelection(result.length());
+                money_output.setText("");
             }
         });
 
@@ -191,6 +195,7 @@ public class MainActivity extends AppCompatActivity
                 TextView moneyInput = findViewById(R.id.money_1);
                 moneyInput.setText("299000");
                 money_input.setSelection(result.length());
+                money_output.setText("");
             }
         });
 
@@ -200,6 +205,16 @@ public class MainActivity extends AppCompatActivity
                 TextView moneyInput = findViewById(R.id.money_1);
                 moneyInput.setText("220000");
                 money_input.setSelection(result.length());
+                money_output.setText("");
+            }
+        });
+
+        findViewById(R.id.button_calculate).setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View view) {
+                imm.hideSoftInputFromWindow(money_input.getWindowToken(), 0);
+                double changeValue = Integer.parseInt(money_input.getText().toString().replaceAll(",", "")) * currencyRate;
+                String formatted = df.format(changeValue);
+                money_output.setText(formatted + ""); // 위에서 얻은 변경된값을 textView에 표시한다
             }
         });
         // End of Button Click Event
@@ -223,14 +238,10 @@ public class MainActivity extends AppCompatActivity
                 money_input.setHint("Enter Amount in KRW");
                 money_output.setText("");
             } else {
-                double changeValue = Integer.parseInt(money_input.getText().toString().replaceAll(",", "")) * currencyRate;
-                String formatted = df.format(changeValue);
-                money_output.setText(formatted + ""); // 위에서 얻은 변경된값을 textView에 표시한다
-
                 if (!s.toString().equals(result)) {     // StackOverflow를 막기위해,
                     result = df.format(Long.parseLong(s.toString().replaceAll(",", "")));   // 에딧텍스트의 값을 변환하여, result에 저장.
                     money_input.setText(result);    // 결과 텍스트 셋팅.
-//                    money_input.setSelection(result.length());     // 커서를 제일 끝으로 보냄.
+                    money_input.setSelection(result.length());     // 커서를 제일 끝으로 보냄.
                 }
             }
         }
